@@ -1,6 +1,6 @@
 CC         = clang++
 CFLAGS     = -Werror -g -ferror-limit=1 -O0 -std=c++14
-LIBS       = -lSDL2 -lGLEW -lGL -lGLU -lpthread -lfreetype -I/usr/include/freetype2
+LIBS       = -lSDL2 -lGLEW -lGL -lGLU -lpthread -lfreetype -I/usr/include/freetype2 -I/usr/include/SDL2
 
 
 .PHONY: maze-interpreter no-gui

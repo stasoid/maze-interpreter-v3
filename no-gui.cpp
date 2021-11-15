@@ -58,7 +58,7 @@ main(int argc, char const *argv[])
 
   if (argc > 1)
   {
-    game_state->filename = argv[1];
+    game_state->filename = (u8*)argv[1];
   }
   else
   {
@@ -66,7 +66,7 @@ main(int argc, char const *argv[])
     return 0;
   }
 
-  b32 success = load_maze(&memory, game_state, argc, argv);
+  b32 success = load_maze(&memory, game_state/*, argc, argv*/);
   if (!success)
   {
     printf("Error: Couldn't load maze.\n");

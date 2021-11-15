@@ -8,14 +8,14 @@ re_form_world_coord(WorldSpace *result)
   vec2 integer_offset = round_down(result->offset);
 
   if ((integer_offset.x < 0 && result->cell_x > 0) ||
-      (integer_offset.x > 0 && result->cell_x < (2^32)-1))
+      (integer_offset.x > 0 && result->cell_x < (1LL<<32)-1))
   {
     result->cell_x += integer_offset.x;
     result->offset.x -= integer_offset.x;
   }
 
   if ((integer_offset.y < 0 && result->cell_y > 0) ||
-      (integer_offset.y > 0 && result->cell_y < (2^32)-1))
+      (integer_offset.y > 0 && result->cell_y < (1LL<<32)-1))
   {
     result->cell_y += integer_offset.y;
     result->offset.y -= integer_offset.y;

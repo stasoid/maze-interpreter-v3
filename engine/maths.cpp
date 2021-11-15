@@ -71,7 +71,7 @@ abs(s32 x)
   }
   return result;
 }
-r32
+/*r32
 abs(r32 x)
 {
   r32 result = x;
@@ -80,7 +80,7 @@ abs(r32 x)
     result = -x;
   }
   return result;
-}
+}*/
 
 
 s32
@@ -187,7 +187,7 @@ sign(r32 a)
   return result;
 }
 
-
+/*
 r32
 sin(r32 x)
 {
@@ -200,4 +200,4 @@ cos(r32 x)
 {
   r32 result = (r32)cos((r64)x);
   return result;
-}
+}*/
